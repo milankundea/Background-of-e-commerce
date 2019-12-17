@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../util/layui/css/layui.css">
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            font-size: 16px;
+            list-style: none;
+        }
+        .select{
+            width: 200px;
+            height: 50px;
+            border-radius: 5px;
+            z-index: 10;
+        }
+        .head{
+            padding: 20px;
+        }
+        h1{
+            padding: 20px;
+            font-size: 35px;
+        }
+        .left{
+            display: inline-block;
+            margin-left: 40px;
+        }
+        .left>input{
+            width: 200px;
+            display: inline-block;
+        }
+        .layui-form{
+            float: left;
+        }
+        .right{
+            float: right;
+        }
+        .Sx{
+            padding: 10px;
+            overflow: hidden;
+            border-radius: 5px;
+            border: 1px solid #ebeef5
+        }
+        .Sx>p{
+            font-size: 20px;
+            padding: 10px;
+        }
+        .content{
+        margin: 20px;
+        }
+        img{
+            width: 60px;
+            height: 60px;
+        }
+    </style>
+</head>
+<body>
+<div class="head">
+    <h1>商品管理</h1>
+    <div class="Sx">
+        <p><i class="layui-icon">&#xe615;</i>查询</p>
+        <div class="layui-form">
+            <!--//品牌筛选//-->
+            <div class="layui-form-item left">
+                <label class="layui-form-label">品牌:</label>
+                <div class="layui-input-block select">
+                    <select name="city" lay-verify="required">
+                        <option value="0">所有</option>
+                        <option value="1">索尼</option>
+                        <option value="2">尼康</option>
+                        <option value="3">佳能</option>
+                        <option value="4">其他</option>
+                    </select>
+                </div>
+            </div>
+            <!--//种类筛选//-->
+            <div class="layui-form-item left">
+                <label class="layui-form-label">种类:</label>
+                <div class="layui-input-block select">
+                    <select name="city" lay-verify="required">
+                        <option value="0">所有</option>
+                        <option value="1">相机</option>
+                        <option value="2">配件</option>
+                    </select>
+                </div>
+            </div>
+            <!--//上架状态筛选//-->
+            <div class="layui-form-item left">
+                <label class="layui-form-label">上架状态:</label>
+                <div class="layui-input-block select">
+                    <select name="city" lay-verify="required">
+                        <option value="0">所有</option>
+                        <option value="1">上架</option>
+                        <option value="2">下架</option>
+                    </select>
+                </div>
+            </div>
+            <!--//商品编号//-->
+            <div class="layui-form-item left">
+                <label class="layui-form-label">商品编号:</label>
+                <input type="text"  placeholder="请输入商品编号" class="layui-input">
+            </div>
+            <!--//商品名查询//-->
+            <div class="layui-form-item left">
+                <label class="layui-form-label">商品查询:</label>
+                <input type="text"  placeholder="请输入商品名称" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-btn-group right">
+            <button type="button" class="layui-btn">确定</button>
+            <button type="button" class="layui-btn">重置</button>
+        </div>
+    </div>
+</div>
+<div class="content">
+    <table class="layui-table" lay-data="{height:500, url:'#', page:true, id:'test',limit:5}"
+           lay-filter="test" >
+        <thead style="background:#F2F6FC">
+        <tr style="background-color:#F2F6FC">
+            <th lay-data="{field:'id', width:100, sort: true}" style="background-color:#F2F6FC">编号</th>
+            <th lay-data="{field:'username', width:120}">图片</th>
+            <th lay-data="{field:'sex', width:100}">名称</th>
+            <th lay-data="{field:'city'}">颜色</th>
+            <th lay-data="{field:'sign'}">规格</th>
+            <th lay-data="{field:'si'}，width:120">展示图</th>
+            <th lay-data="{field:'experience', sort: true}">价格</th>
+            <th lay-data="{field:'classify'}">状态</th>
+            <th lay-data="{field:'wealth'}">操作</th>
+        </tr>
+        </thead>
+    </table>
+</div>
+</body>
+<script src="../util/jquery-3.4.1.js"></script>
+<script src="../util/layui/layui.all.js"></script>
+<script>
+    // layui.use('table', function(){
+    //     var table = layui.table;
+    //
+    //     //第一个实例
+    //     table.render({
+    //         elem: '#demo'
+    //         ,height: 312
+    //         ,url: '#' //数据接口
+    //         ,page: true //开启分页
+    //         ,cols: [[ //表头
+    //             {field: 'id', title: '商品编号', width:100, sort: true, fixed: 'left'}
+    //             ,{field: 'username', title: '商品名称', width:100}
+    //             ,{field: 'sex', title: '图片', width:120}
+    //             ,{field: 'city', title: '商品价格', width:100, sort: true}
+    //             ,{field: 'sign', title: '商品规格', width: 100}
+    //             ,{field: 'experience', title: '商品颜色', width: 100}
+    //             ,{field: 'score', title: '商品库存', width: 100, sort: true}
+    //             ,{field: 'classify', title: '上架状态', width: 100}
+    //             ,{field: 'wealth', title: '操作', width: 135}
+    //         ]]
+    //     });
+    //
+    // });
+</script>
+</html>

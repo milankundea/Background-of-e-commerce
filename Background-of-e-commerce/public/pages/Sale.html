@@ -6,21 +6,43 @@
     <link rel="stylesheet" href="../util/layui/css/layui.css">
     <link rel="stylesheet" href="../css/ccl/Sale.css">
     <style>
-        /*img{*/
-            /*width: 60px;*/
-            /*height: 60px;*/
-            /*border-radius: 50%;*/
-        /*}*/
-        /*.sj{*/
-            /*background: #F2F2F2;*/
-            /*margin: 15px;*/
-            /*width:450px;*/
-            /*height:350px;*/
-            /*border-radius: 5px;*/
-        /*}*/
+        img{
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+        }
+        .sj{
+            background: #f2f6fc;
+            margin: 15px;
+            width:450px;
+            height:350px;
+            border-radius: 5px;
+        }
+        .head{
+            padding: 20px;
+        }
+        .content{
+            margin: 15px;
+        }
+        h1{
+            padding: 20px;
+            font-size: 35px;
+        }
+        .ss{
+            margin-left: calc(100% - 400px);
+            clear: both;
+            width: 300px;
+        }
+        .ss>input{
+        display: inline-block;
+        width: 200px;
+        }
     </style>
 </head>
 <body>
+<div class="head">
+    <h1>销售记录</h1>
+</div>
 <div class="layui-row">
     <div class="layui-col-md4">
         <div id="shop" class="sj"></div>
@@ -32,47 +54,27 @@
         <div id="type" class="sj"></div>
     </div>
 </div>
-<div>
-    <div class="Tbale">
-        <table class="layui-table">
-            <thead>
-            <tr>
-                <th>编号</th>
-                <th>图片</th>
-                <th>名称</th>
-                <th>售价</th>
-                <th>规格</th>
-                <th>销售量</th>
-                <th>状态</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>
-                    10110
-                </td>
-                <td>
-                    <img src="../images/photo/0.jpg">
-                </td>
-                <td>
-                    单反
-                </td>
-                <td>
-                    20
-                </td>
-                <td>
-                    红色xxxxxx款
-                </td>
-                <td>
-                    5
-                </td>
-                <td>
-                    上架中
-                </td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
+<div class="ss">
+    <input type="text"  placeholder="请输入商品编号或名称" class="layui-input">
+    <button type="button" class="layui-btn ">搜索</button>
+</div>
+<div class="content">
+    <table class="layui-table" lay-data="{height:500, url:'#', page:true, id:'test',limit:5}"
+           lay-filter="test" >
+        <thead>
+        <tr>
+            <th lay-data="{field:'id', width:100, sort: true}">编号</th>
+            <th lay-data="{field:'username',width:120}">图片</th>
+            <th lay-data="{field:'sex', width:100}">名称</th>
+            <th lay-data="{field:'city'}">规格</th>
+            <th lay-data="{field:'sign'}">库存</th>
+            <th lay-data="{field:'experience', sort: true}">价格</th>
+            <th lay-data="{field:'score',sort: true}">月销量</th>
+            <th lay-data="{field:'classify', sort: true}">销售总额</th>
+            <th lay-data="{field:'wealth'}">操作</th>
+        </tr>
+        </thead>
+    </table>
 </div>
 </body>
 <script src="../util/jquery-3.4.1.js"></script>
