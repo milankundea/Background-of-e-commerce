@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../util/layui/css/layui.css">
+    <link rel="stylesheet" href="../css/ccl/Sale.css">
+    <style>
+        /*img{*/
+            /*width: 60px;*/
+            /*height: 60px;*/
+            /*border-radius: 50%;*/
+        /*}*/
+        /*.sj{*/
+            /*background: #F2F2F2;*/
+            /*margin: 15px;*/
+            /*width:450px;*/
+            /*height:350px;*/
+            /*border-radius: 5px;*/
+        /*}*/
+    </style>
+</head>
+<body>
+<div class="layui-row">
+    <div class="layui-col-md4">
+        <div id="shop" class="sj"></div>
+    </div>
+    <div class="layui-col-md4">
+        <div id="brand" class="sj"></div>
+    </div>
+    <div class="layui-col-md4">
+        <div id="type" class="sj"></div>
+    </div>
+</div>
+<div>
+    <div class="Tbale">
+        <table class="layui-table">
+            <thead>
+            <tr>
+                <th>编号</th>
+                <th>图片</th>
+                <th>名称</th>
+                <th>售价</th>
+                <th>规格</th>
+                <th>销售量</th>
+                <th>状态</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    10110
+                </td>
+                <td>
+                    <img src="../images/photo/0.jpg">
+                </td>
+                <td>
+                    单反
+                </td>
+                <td>
+                    20
+                </td>
+                <td>
+                    红色xxxxxx款
+                </td>
+                <td>
+                    5
+                </td>
+                <td>
+                    上架中
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+<script src="../util/jquery-3.4.1.js"></script>
+<script src="../util/layui/layui.all.js"></script>
+<script src="../util/echarts.js"></script>
+<script>
+    var myChart = echarts.init(document.getElementById('shop'));
+    var myChart2 = echarts.init(document.getElementById('brand'));
+    var myChart3= echarts.init(document.getElementById('type'));
+    var option = {
+        title : {
+            text: '月销售记录',
+            subtext: '前十',
+            x:'center'
+        },
+        color: ['#3398DB'],
+        tooltip : {
+            trigger: 'axis',
+            axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+                type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+            }
+        },
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+        },
+        xAxis : [
+            {
+                type : 'category',
+                data : ['xx', 'xx', 'xx', 'xx', 'xx', 'xx', 'xx', 'xx', 'xx', 'xx'],
+                axisTick: {
+                    alignWithLabel: true
+                }
+            }
+        ],
+        yAxis : [
+            {
+                type : 'value'
+            }
+        ],
+        series : [
+            {
+                name:'已售出',
+                type:'bar',
+                barWidth: '60%',
+                data:[10, 52, 200, 334, 390, 330, 220,200,200,200]
+            }
+        ]
+    };
+    var option2= {
+        title : {
+            text: '月销售记录',
+            // subtext: '纯属虚构',
+            x:'center'
+        },
+        tooltip: {
+            trigger: 'item',
+            formatter: "{a} <br/>{b}: {c} ({d}%)"
+        },
+        legend: {
+            orient: 'vertical',
+            x: 'left',
+            data:['索尼','佳能','尼康','其他']
+        },
+        series: [
+            {
+                name:'销售比例',
+                type:'pie',
+                radius: ['50%', '70%'],
+                avoidLabelOverlap: false,
+                label: {
+                    normal: {
+                        show: false,
+                        position: 'center'
+                    },
+                    emphasis: {
+                        show: true,
+                        textStyle: {
+                            fontSize: '30',
+                            fontWeight: 'bold'
+                        }
+                    }
+                },
+                labelLine: {
+                    normal: {
+                        show: false
+                    }
+                },
+                data:[
+                    {value:335, name:'索尼'},
+                    {value:310, name:'佳能'},
+                    {value:234, name:'尼康'},
+                    {value:1548, name:'其他'}
+                ]
+            }
+        ]
+    };
+    var option3= {
+        title : {
+            text: '月销售记录',
+            // subtext: '纯属虚构',
+            x:'center'
+        },
+        tooltip : {
+            trigger: 'item',
+            formatter: "{a} <br/>{b} : {c} ({d}%)"
+        },
+        legend: {
+            orient: 'vertical',
+            left: 'left',
+            data: ['配件','相机']
+        },
+        series : [
+            {
+                name: '访问来源',
+                type: 'pie',
+                radius : '55%',
+                center: ['50%', '60%'],
+                data:[
+                    {value:335, name:'相机'},
+                    {value:1548, name:'配件'}
+                ],
+                itemStyle: {
+                    emphasis: {
+                        shadowBlur: 10,
+                        shadowOffsetX: 0,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    }
+                }
+            }
+        ]
+    };
+    myChart.setOption(option);
+    myChart2.setOption(option2);
+    myChart3.setOption(option3)
+</script>
+</html>

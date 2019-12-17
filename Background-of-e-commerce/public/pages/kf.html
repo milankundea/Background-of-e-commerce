@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../util/layui/css/layui.css">
+    <link rel="stylesheet" href="../css/ccl/kf.css">
+    <style>
+        /*body{*/
+            /*background: #b3d4fc;*/
+        /*}*/
+        /*.head{*/
+            /*text-align: center;*/
+            /*padding: 10px;*/
+            /*background-color: #303643;*/
+        /*}*/
+        /*.head>h1{*/
+            /*font-size: 40px;*/
+            /*color: rgba(255,255,255,0.8);*/
+            /*display: inline-block;*/
+        /*}*/
+        /*.head>button{*/
+            /*float: right;*/
+            /*margin-top: 20px;*/
+        /*}*/
+        /*img{*/
+            /*height: 60px;*/
+            /*width: 60px;*/
+            /*border-radius: 50%;*/
+        /*}*/
+        /*.left{*/
+            /*background:#f8f8f8;*/
+            /*height: 680px;*/
+            /*overflow: auto;*/
+            /*overflow-x: hidden;*/
+            /*border-left: 1px solid #babbbb;*/
+            /*border-top: 1px solid #babbbb;*/
+        /*}*/
+        /*.me{*/
+            /*padding-bottom: 10px;*/
+            /*text-align: center;*/
+            /*border-bottom: 1px solid #babbbb;*/
+        /*}*/
+        /*.me>img{*/
+            /*padding-top: 5px;*/
+            /*padding-bottom: 10px;*/
+        /*}*/
+        /*.left>ul>li{*/
+            /*padding: 10px 0;*/
+            /*width: 137px;*/
+            /*height: 80px;*/
+            /*overflow: hidden;*/
+        /*}*/
+        /*.left>ul>li>img{*/
+            /*margin-left:15px ;*/
+        /*}*/
+        /*.left>ul>li>span{*/
+            /*font-size: 20px;*/
+        /*}*/
+        /*.chat>div>img{*/
+            /*height: 50px;*/
+            /*width: 50px;*/
+            /*border-radius: 50%;*/
+        /*}*/
+        /*.chathead{*/
+            /*padding: 45px 40px 23px 40px ;*/
+            /*border: 1px solid #babbbb;*/
+            /*border-left: none;*/
+            /*background: white;*/
+        /*}*/
+        /*.chat{*/
+            /*background: #F2F6FC;*/
+            /*height: 485px;*/
+        /*}*/
+        /*.chat>div{*/
+            /*padding: 10px;*/
+        /*}*/
+        /*.chat>div>span{*/
+            /*font-size: 20px;*/
+            /*padding: 5px;*/
+            /*border: 1px solid #b3d4fc;*/
+        /*}*/
+        /*.chatting{*/
+            /*padding: 10px;*/
+        /*}*/
+        /*.news{*/
+            /*float: left;*/
+            /*width: calc(50% - 5px);*/
+            /*height: 250px;*/
+            /*margin-top: 10px;*/
+            /*background: white;*/
+            /*box-shadow:0 1px 1px #000;*/
+        /*}*/
+        /*.news>p{*/
+            /*font-size: 20px;*/
+            /*padding: 5px;*/
+            /*font-weight: 700;*/
+        /*}*/
+        /*.news>p>span{*/
+            /*padding-left: 10px;*/
+            /*font-weight: 400;*/
+            /*font-size: 20px;*/
+        /*}*/
+        /*.history{*/
+            /*float: left;*/
+            /*width: calc(50% - 5px);*/
+            /*height: 250px;*/
+            /*overflow: hidden;*/
+            /*margin-top: 10px;*/
+            /*margin-left: 10px;*/
+            /*box-shadow:0 1px 1px #000;*/
+            /*background: white;*/
+        /*}*/
+        /*.righthead{*/
+            /*text-align: center;*/
+            /*line-height: 68px;*/
+            /*font-size: 30px;*/
+            /*background: #F2F2F2;*/
+            /*font-weight: 700;*/
+        /*}*/
+        /*.order{*/
+            /*margin-top: 5px;*/
+            /*box-shadow:0 1px 1px #000;*/
+            /*height: 400px;*/
+            /*background: white;*/
+        /*}*/
+        /*.order>div>input{*/
+            /*margin: 5px 0 0 5px;*/
+            /*height:38px;*/
+            /*width: 300px;*/
+        /*}*/
+        /*.kf>span{*/
+            /*background: #3ebe7a;*/
+        /*}*/
+        /*.kh>span{*/
+            /*background: white;*/
+        /*}*/
+        /*.text>input{*/
+            /*width: 600px;*/
+            /*height: 80px;*/
+        /*}*/
+    </style>
+</head>
+<body>
+<div class="head">
+    <h1>数码商城客服系统</h1>
+    <button type="button" class="layui-btn layui-btn-warm">注销</button>
+</div>
+<div class="layui-row">
+    <div class="layui-col-md6">
+        <div class="layui-row chatting">
+            <div class="layui-col-md2 left">
+                <div class="me">
+                    <img src="../images/photo/0.jpg">
+                    <p>当前登录昵称：<span>xx</span></p>
+                </div>
+                <ul>
+                    <li><img src="../images/photo/0.jpg"><span>xxx</span></li>
+                    <li><img src="../images/photo/0.jpg"><span>xxx</span></li>
+                    <li><img src="../images/photo/0.jpg"><span>xxx</span></li>
+                    <li><img src="../images/photo/0.jpg"><span>xxx</span></li>
+                    <li><img src="../images/photo/0.jpg"><span>xxx</span></li>
+                </ul>
+            </div>
+            <div class="layui-col-md10">
+                <div class="chathead">
+                    <h1>白色的云</h1>
+                </div>
+                <div class="chat">
+                    <div class="kf">
+                        <img src="../images/photo/0.jpg">
+                        <span>你好</span>
+                    </div>
+                    <div class="kh">
+                        <img src="../images/photo/0.jpg">
+                        <span>你好</span>
+                    </div>
+                </div>
+                <div class="text">
+                    <input type="text">
+                    <button class="layui-btn layui-btn-radius layui-btn-normal">发送</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="layui-col-md6 right">
+        <div style="overflow: hidden;padding: 5px">
+            <div class="news">
+                <div class="righthead">客户信息</div>
+                <p>访问来源:<span>xxx</span></p>
+                <p>账&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号:<span>xxx</span></p>
+                <p>昵&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;称:<span>xxx</span></p>
+                <p>性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别:<span>男</span></p>
+            </div>
+            <div class="history">
+                <div class="righthead">历史记录</div>
+                <h4>2019/12/16 10:13</h4>
+                <p>处理了客户<span>xxx</span>的请求</p>
+            </div>
+        </div>
+        <div class="order">
+            <div class="righthead">订单查询</div>
+            <div>
+                <input type="text">
+                <button type="button" class="layui-btn">搜索</button>
+            </div>
+            <table class="layui-table " lay-size="sm">
+                <thead>
+                <tr>
+                    <th>商品名称</th>
+                    <th>商品价格</th>
+                    <th>购买数量</th>
+                    <th>商品编号</th>
+                    <th>下单时间</th>
+                    <th>总价</th>
+                    <th>订单状态</th>
+                </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../util/jquery-3.4.1.js"></script>
+<script src="../util/layui/layui.all.js"></script>
+</html>
