@@ -1,0 +1,21 @@
+.see_bg_rgbar{background-color: rgba(225,0,2,0.1);}
+  .see_bg_rgba{background-color: rgba(0,0,0,0.1);}
+  .see_bg_rgbag{background-color: rgba(0,255,0,0.1);}
+  .see_bg_rgbab{background-color: rgba(0,0,255,0.1);}
+ 
+.diycard-header{
+    background-color: #F2F6FC;
+}
+.diy-card-text{
+   margin: 0 auto;
+}
+.layui-table i{
+    float: right;
+    color: red;
+}
+.card-info{
+    text-align: center;
+}
+.card-info>h3{
+    color: red;
+} 

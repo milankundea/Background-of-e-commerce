@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../util/layui/css/layui.css">
+</head>
+<body style="border: 1px soild red;">
+      <div style="padding: 20px; background-color: #FFF;">
+        <div class="layui-row layui-col-space15">
+          <div class="layui-col-md4">
+            <div class="layui-card">
+              <div class="layui-card-header diycard-header">今日订单总数</div>
+              <div class="layui-card-body">
+                <h1 class="diy-card-text">200</h1>
+              </div>
+            </div>
+          </div>
+          <div class="layui-col-md4">
+            <div class="layui-card">
+              <div class="layui-card-header diycard-header">今日销售总额</div>
+              <div class="layui-card-body">
+                <h1 class="diy-card-text">￥20000</h1>
+              </div>
+            </div>
+          </div>
+          <div class="layui-col-md4">
+            <div class="layui-card">
+              <div class="layui-card-header diycard-header">昨日销售总额</div>
+              <div class="layui-card-body">
+                <h1 class="diy-card-text">￥50000</h1>
+              </div>
+            </div> 
+          </div>
+
+          <div class="layui-col-md12">
+            <div class="layui-card">
+              <div class="layui-card-header diycard-header">待处理事务</div>
+              <div class="layui-card-body">
+                <div   class="layui-row">
+              
+                    <table class="layui-table">
+                      <colgroup>
+                        <col width="33.3%">
+                        <col width="33.3%">
+                        <col width="33.3%">
+                        <col>
+                      </colgroup>
+                
+                      <tbody>
+                        <tr>
+                          <td>待付款订单<i>(10)</i></td>
+                          <td>已完成订单<i>(10)</i></td>
+                          <td>待确认收货订单<i>(10)</i></td>
+                        </tr>
+                        <tr>
+                            <td>待发货订单<i>(10)</i></td>
+                            <td>新缺货登记<i>(10)</i></td>
+                            <td>待处理退款申请<i>(10)</i></td>
+                          </tr>
+                        <tr>
+                          <td>已发货订单<i>(10)</i></td>
+                          <td>待处理退货订单<i>(10)</i></td>
+                          <td>广告位即将到期<i>(10)</i></td>  
+                        </tr>
+                      </tbody>
+                    </table>
+                </div>
+                 
+              </div>
+            </div>
+          </div>
+
+
+          <div class="layui-col-md6">
+            <div class="layui-card">
+              <div class="layui-card-header diycard-header">商品总览</div>
+              <div class="layui-card-body">
+                <div   class="layui-row">
+                        <div class="layui-col-md3 card-info">
+                            <h3>100</h3><br>
+                            <h4>已下架</h4>
+                        </div>
+                        <div class="layui-col-md3 card-info">
+                            <h3>400</h3><br>
+                            <h4>已上架</h4>
+                        </div>
+                        <div class="layui-col-md3 card-info">
+                            <h3>50</h3><br>
+                            <h4>库存紧张</h4>
+                        </div>
+                        <div class="layui-col-md3 card-info">
+                            <h3>500</h3><br>
+                            <h4>全部商品</h4>
+                        </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+
+
+          <div class="layui-col-md6">
+            <div class="layui-card">
+              <div class="layui-card-header diycard-header">用户总览</div>
+              <div class="layui-card-body">
+                <div   class="layui-row">
+                    <div class="layui-col-md3 card-info">
+                        <h3>395</h3><br>
+                        <h4>今日新增</h4>
+                    </div>
+                    <div class="layui-col-md3 card-info">
+                        <h3>684</h3><br>
+                        <h4>昨日新增</h4>
+                    </div>
+                    <div class="layui-col-md3 card-info">
+                        <h3>5734</h3><br>
+                        <h4>本月新增</h4>
+                    </div>
+                    <div class="layui-col-md3 card-info">
+                        <h3>6839840</h3><br>
+                        <h4>会员总数</h4>
+                    </div>
+            </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="layui-col-md12">
+            <div class="layui-card">
+              <div class="layui-card-header diycard-header">订单总览</div>
+              <div class="layui-card-body">
+                <div   class="layui-row">
+                    <div class="layui-col-md2">
+                        <p>12345678</p><br>
+                        <p>12345678</p><br>
+                        <p>12345678</p><br>
+                        <p>12345678</p><br>
+                        <p>12345678</p><br>
+                        <p>12345678</p><
+                    </div>
+                    <div class="layui-col-md10" id="echartAll">
+                        echartAll
+                    </div>
+                  
+                </div>
+                 
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div> 
+      <script src="../util/layui/layui.js" charset="utf-8g"></script>
+<!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
+<script>
+layui.use(['element', 'layer'], function(){
+  var element = layui.element;
+  var layer = layui.layer;
+  
+  //监听折叠
+  element.on('collapse(test)', function(data){
+    layer.msg('展开状态：'+ data.show);
+  });
+});
+
+const DATA_FROM_BACKEND = {
+    columns: ['date', 'orderCount','orderAmount'],
+    rows: [
+      {date: '2018-11-01', orderCount: 10, orderAmount: 1093},
+      {date: '2018-11-02', orderCount: 20, orderAmount: 2230},
+      {date: '2018-11-03', orderCount: 33, orderAmount: 3623},
+      {date: '2018-11-04', orderCount: 50, orderAmount: 6423},
+      {date: '2018-11-05', orderCount: 80, orderAmount: 8492},
+      {date: '2018-11-06', orderCount: 60, orderAmount: 6293},
+      {date: '2018-11-07', orderCount: 20, orderAmount: 2293},
+      {date: '2018-11-08', orderCount: 60, orderAmount: 6293},
+      {date: '2018-11-09', orderCount: 50, orderAmount: 5293},
+      {date: '2018-11-10', orderCount: 30, orderAmount: 3293},
+      {date: '2018-11-11', orderCount: 20, orderAmount: 2293},
+      {date: '2018-11-12', orderCount: 80, orderAmount: 8293},
+      {date: '2018-11-13', orderCount: 100, orderAmount: 10293},
+      {date: '2018-11-14', orderCount: 10, orderAmount: 1293},
+      {date: '2018-11-15', orderCount: 40, orderAmount: 4293}
+    ]
+  };
+  export default {
+    name: 'home',
+    data() {
+      return {
+        pickerOptions: {
+          shortcuts: [{
+            text: '最近一周',
+            onClick(picker) {
+              const end = new Date();
+              let start = new Date();
+              start.setFullYear(2018);
+              start.setMonth(10);
+              start.setDate(1);
+              end.setTime(start.getTime() + 3600 * 1000 * 24 * 7);
+              picker.$emit('pick', [start, end]);
+            }
+          }, {
+            text: '最近一月',
+            onClick(picker) {
+              const end = new Date();
+              let start = new Date();
+              start.setFullYear(2018);
+              start.setMonth(10);
+              start.setDate(1);
+              end.setTime(start.getTime() + 3600 * 1000 * 24 * 30);
+              picker.$emit('pick', [start, end]);
+            }
+          }]
+        },
+        orderCountDate: '',
+        chartSettings: {
+          xAxisType: 'time',
+          area:true,
+          axisSite: { right: ['orderAmount']},
+        labelMap: {'orderCount': '订单数量', 'orderAmount': '订单金额'}},
+        chartData: {
+          columns: [],
+          rows: []
+        },
+        loading: false,
+        dataEmpty: false,
+        img_home_order,
+        img_home_today_amount,
+        img_home_yesterday_amount
+      }
+    },
+    created(){
+      this.initOrderCountDate();
+      this.getData();
+    },
+    methods:{
+      handleDateChange(){
+        this.getData();
+      },
+      initOrderCountDate(){
+        let start = new Date();
+        start.setFullYear(2018);
+        start.setMonth(10);
+        start.setDate(1);
+        const end = new Date();
+        end.setTime(start.getTime() + 1000 * 60 * 60 * 24 * 7);
+        this.orderCountDate=[start,end];
+      },
+      getData(){
+        setTimeout(() => {
+          this.chartData = {
+            columns: ['date', 'orderCount','orderAmount'],
+            rows: []
+          };
+          for(let i=0;i<DATA_FROM_BACKEND.rows.length;i++){
+            let item=DATA_FROM_BACKEND.rows[i];
+            let currDate=str2Date(item.date);
+            let start=this.orderCountDate[0];
+            let end=this.orderCountDate[1];
+            if(currDate.getTime()>=start.getTime()&&currDate.getTime()<=end.getTime()){
+              this.chartData.rows.push(item);
+            }
+          }
+          this.dataEmpty = false;
+          this.loading = false
+        }, 1000)
+      }
+    }
+  }
+</script>   
+</body>
+</html>

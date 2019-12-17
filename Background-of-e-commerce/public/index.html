@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./util/layui/css/layui.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+  
+  <!-- 右边头部导航 -->
+  <header class="header  ">
+    <div class="header-left ">
+      <h1>logo</h1>
+      <p>首页</p>
+      <i>/</i>
+    </div>
+    <div class="header-right ">
+      <div>
+        <i>logo</i>
+      </div>
+    </div>
+  </header>
+  <!-- 侧边导航 -->
+  <div class="the-side-nav see_bg_rgbar">
+        <ul class="the-side-nav1">
+          <li class="nav-item" >
+            <a href="javascript:;">
+              <i>logo</i>
+              <cite>管理系统</cite>
+            </a>
+          </li>
+          <li class="nav-item" >
+            <a  href="./pages/Home.html" target="if1">
+              <i>icon</i>
+              <cite>首页</cite>
+            </a>
+          </li>
+          <li id="1"  class="nav-item">
+            <a href="javascript:;">
+              <i>icon</i>
+              <cite>商品</cite>
+            </a>
+              <ul id="2" class="nav-item-item">
+                <li class="nav-item-itemli">
+                  <a href="javascript:;">
+                    <i>icon</i>
+                    <cite>商品列表</cite>
+                  </a>
+                </li>
+                <li class="nav-item-itemli">
+                  <a href="./pages/AddGoos.html" target="if1" >
+                    <i>icon</i>
+                    <cite>添加商品</cite>
+                  </a>
+                </li>
+                <li class="nav-item-itemli">
+                  <a href="javascript:;">
+                    <i>icon</i>
+                    <cite>商品分类</cite>
+                  </a>
+                </li>
+                <li class="nav-item-itemli">
+                  <a href="javascript:;">
+                    <i>icon</i>
+                    <cite>商品类型</cite>
+                  </a>
+                </li>
+                <li class="nav-item-itemli">
+                  <a href="javascript:;">
+                    <i>icon</i>
+                    <cite>品牌管理</cite>
+                  </a>
+                </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="javascript:;">
+              <i>icon</i>
+              <cite>订单</cite>
+            </a>
+            <ul id="2" class="nav-item-item">
+              <li class="nav-item-itemli">
+                <a href="javascript:;">
+                  <i>icon</i>
+                  <cite>订单列表</cite>
+                </a>
+              </li>
+              <li class="nav-item-itemli">
+                <a href="javascript:;">
+                  <i>icon</i>
+                  <cite>订单列表</cite>
+                </a>
+              </li>
+              <li class="nav-item-itemli">
+                <a href="javascript:;">
+                  <i>icon</i>
+                  <cite>订单列表</cite>
+                </a>
+              </li>
+              <li class="nav-item-itemli">
+                <a href="javascript:;">
+                  <i>icon</i>
+                  <cite>订单列表</cite>
+                </a>
+              </li>
+          </ul>
+          </li>
+          <li class="nav-item">
+            <a href="javascript:;">
+              <i>icon</i>
+              <cite>客服</cite>
+            </a>
+            <ul id="2" class="nav-item-item">
+              <li class="nav-item-itemli">
+                <a href="javascript:;">
+                  <i>icon</i>
+                  <cite>订单列表</cite>
+                </a>
+              </li>
+              <li class="nav-item-itemli">
+                <a href="javascript:;">
+                  <i>icon</i>
+                  <cite>订单列表</cite>
+                </a>
+              </li>
+              <li class="nav-item-itemli">
+                <a href="javascript:;">
+                  <i>icon</i>
+                  <cite>订单列表</cite>
+                </a>
+              </li>
+              <li class="nav-item-itemli">
+                <a href="javascript:;">
+                  <i>icon</i>
+                  <cite>订单列表</cite>
+                </a>
+              </li>
+          </ul>
+          </li>
+        </ul>
+       
+  </div>
+  <!-- iframe -->
+  <div class="main-docer " >
+    <iframe class="main-iframe"  src="./pages/Home.html" name="if1"  frameborder="0" frameborder="0">
+
+    </iframe>
+  </div> 
+</body>
+<script src="./util/jquery-3.4.1.js"></script>
+<script>
+  $('.nav-item').on('click',function () {
+    // $(this).prev("li").children("ul").css("display", "none"); //隐藏前一个兄弟的ul
+    //  $(this).children("ul").css("display", "block");   //隐藏当前的ul
+    // $(this).children("ul").show(); //隐藏当前的ul
+   $(this).children("ul").toggle();  //循环显示/隐藏
+  })
+</script>
+</html>

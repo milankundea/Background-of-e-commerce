@@ -1,0 +1,106 @@
+*{
+    margin: 0 auto;
+    padding: 0 auto;
+    list-style: none;
+  }
+  .c_ds{list-style: none;}
+  /*观察边框类*/
+  .see_border{border: 1px solid red;}
+  /*观察色块类*/
+  .see_bg{background-color: red;}
+  /*文本本居中*/
+  .text_center{text-align: center;}
+  /*红色 黑色 绿色 蓝色 半透明 边框观察层 */
+  .see_bg_rgbar{background-color: rgba(225,0,2,0.1);}
+  .see_bg_rgba{background-color: rgba(0,0,0,0.1);}
+  .see_bg_rgbag{background-color: rgba(0,255,0,0.1);}
+  .see_bg_rgbab{background-color: rgba(0,0,255,0.1);}
+  .the-side-nav{
+    height: 1000px;
+    width: 150px;
+    float: left;
+    margin-top: -60px;
+    margin-bottom: 0;
+    background-color: #304156;
+  }
+  .header{
+    height: 60px;
+    width: auto;
+    background-color: white;
+    margin-left: 150px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+  }
+  .header-left{
+      width: 30%;
+      height:60px;
+      float: left;
+      line-height: 60px;
+      padding:0 16px;
+  }
+  .header-left>h1{
+    float: left;
+}
+  .header-left>p,.header-left>i{
+      float: left;
+      padding: 0 5px;
+  }
+  .header-right{
+    width: 10%;
+    height:60px;
+    float: right;
+    padding: 0 16px;
+  }
+  .header-right>div{
+      width: 60px;
+      height: 60px;
+      background-color: whitesmoke;
+      border-radius: 10px;
+      line-height: 60px;
+
+  }
+  
+
+  .main-docer{
+    height: 800px;
+    width: auto;
+    margin-left: 150px;
+  }
+  .main-iframe{
+    height: 800px;
+    width: 100%;
+  }
+  .nav-item{
+    width: 100%;
+    background: #304156;
+  }
+  .nav-item:hover{
+    background: #263445;
+  } 
+  .active{
+    display: block;
+  }
+  .nav-item>a i{
+    padding: 0 16px;
+    line-height: 50px;
+    color: white;
+  }
+  .nav-item cite{
+    line-height: 50px;
+    color: white;
+  }
+  .nav-item-item{
+    display: none;
+  }
+  .nav-item-itemli{
+    width: 100%;
+    height: 45px;
+    background: #1F2D3D;
+  }
+  .nav-item-itemli>a i{
+    padding: 0 16px 0 20px;
+    line-height: 50px;
+    color: white;
+  }
+  .nav-item-itemli:hover{
+    background: #102233;
+  }
