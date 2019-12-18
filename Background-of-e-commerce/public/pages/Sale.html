@@ -14,7 +14,7 @@
         .sj{
             background: #f2f6fc;
             margin: 15px;
-            width:450px;
+            width:400px;
             height:350px;
             border-radius: 5px;
         }
@@ -36,6 +36,27 @@
         .ss>input{
         display: inline-block;
         width: 200px;
+        }
+        .tablehead{
+            padding:0 10px 10px 10px;
+            font-size: 20px;
+        }
+        .page{
+            text-align: center;
+        }
+        .pagenum{
+            margin-left:500px;
+        }
+        .pagenum>li{
+            float: left;
+            width: 40px;
+            margin-left: 5px;
+            line-height: 40px;
+            border-radius: 5px;
+            border: 1px solid #ebeef5
+        }
+        .content{
+            margin: 20px;
         }
     </style>
 </head>
@@ -59,22 +80,217 @@
     <button type="button" class="layui-btn ">搜索</button>
 </div>
 <div class="content">
-    <table class="layui-table" lay-data="{height:500, url:'#', page:true, id:'test',limit:5}"
-           lay-filter="test" >
-        <thead>
-        <tr>
-            <th lay-data="{field:'id', width:100, sort: true}">编号</th>
-            <th lay-data="{field:'username',width:120}">图片</th>
-            <th lay-data="{field:'sex', width:100}">名称</th>
-            <th lay-data="{field:'city'}">规格</th>
-            <th lay-data="{field:'sign'}">库存</th>
-            <th lay-data="{field:'experience', sort: true}">价格</th>
-            <th lay-data="{field:'score',sort: true}">月销量</th>
-            <th lay-data="{field:'classify', sort: true}">销售总额</th>
-            <th lay-data="{field:'wealth'}">操作</th>
-        </tr>
-        </thead>
-    </table>
+    <div class="tablehead">商品列表</div>
+    <div class="Tbale">
+        <table class="layui-table layui-form">
+            <thead>
+            <tr>
+                <th>编号</th>
+                <th>名称</th>
+                <th>种类</th>
+                <th>品牌</th>
+                <th>单价</th>
+                <th>规格</th>
+                <th>销量</th>
+                <th>状态</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody id="tbody">
+            <tr>
+                <td>
+                    10110
+                </td>
+                <td>
+                    单反
+                </td>
+                <td>
+                    单反
+                </td>
+                <td>
+                    单反
+                </td>
+                <td>
+                    20
+                </td>
+                <td>
+                    红色
+                </td>
+                <td>
+                    20
+                </td>
+                <td>
+                    上架中
+                </td>
+                <td>
+                    <div class="layui-btn-group">
+                        <button type="button" class="layui-btn">
+                            <i class="layui-icon">&#xe642;</i>
+                        </button>
+                        <button type="button" class="layui-btn">
+                            <i class="layui-icon">&#xe640;</i>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    10110
+                </td>
+                <td>
+                    单反
+                </td>
+                <td>
+                    单反
+                </td>
+                <td>
+                    单反
+                </td>
+                <td>
+                    20
+                </td>
+                <td>
+                    红色
+                </td>
+                <td>
+                    20
+                </td>
+                <td>
+                    上架中
+                </td>
+                <td>
+                    <div class="layui-btn-group">
+                        <button type="button" class="layui-btn">
+                            <i class="layui-icon">&#xe642;</i>
+                        </button>
+                        <button type="button" class="layui-btn">
+                            <i class="layui-icon">&#xe640;</i>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    10110
+                </td>
+                <td>
+                    单反
+                </td>
+                <td>
+                    单反
+                </td>
+                <td>
+                    单反
+                </td>
+                <td>
+                    20
+                </td>
+                <td>
+                    红色
+                </td>
+                <td>
+                    20
+                </td>
+                <td>
+                    上架中
+                </td>
+                <td>
+                    <div class="layui-btn-group">
+                        <button type="button" class="layui-btn">
+                            <i class="layui-icon">&#xe642;</i>
+                        </button>
+                        <button type="button" class="layui-btn">
+                            <i class="layui-icon">&#xe640;</i>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    10110
+                </td>
+                <td>
+                    单反
+                </td>
+                <td>
+                    单反
+                </td>
+                <td>
+                    单反
+                </td>
+                <td>
+                    20
+                </td>
+                <td>
+                    红色
+                </td>
+                <td>
+                    20
+                </td>
+                <td>
+                    上架中
+                </td>
+                <td>
+                    <div class="layui-btn-group">
+                        <button type="button" class="layui-btn">
+                            <i class="layui-icon">&#xe642;</i>
+                        </button>
+                        <button type="button" class="layui-btn">
+                            <i class="layui-icon">&#xe640;</i>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    10110
+                </td>
+                <td>
+                    单反
+                </td>
+                <td>
+                    单反
+                </td>
+                <td>
+                    单反
+                </td>
+                <td>
+                    20
+                </td>
+                <td>
+                    红色
+                </td>
+                <td>
+                    20
+                </td>
+                <td>
+                    上架中
+                </td>
+                <td>
+                    <div class="layui-btn-group">
+                        <button type="button" class="layui-btn">
+                            <i class="layui-icon">&#xe642;</i>
+                        </button>
+                        <button type="button" class="layui-btn">
+                            <i class="layui-icon">&#xe640;</i>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="page">
+        <ul class="pagenum">
+            <li><i class="layui-icon layui-icon-left"></i></li>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li><i class="layui-icon layui-icon-right"></i></li>
+        </ul>
+    </div>
 </div>
 </body>
 <script src="../util/jquery-3.4.1.js"></script>
