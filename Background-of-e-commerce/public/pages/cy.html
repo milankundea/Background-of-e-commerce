@@ -59,7 +59,7 @@
 </head>
 <body>
 <div class="head">
-    <h1>商品管理</h1>
+    <h1>商品列表</h1>
     <div class="Sx">
         <p><i class="layui-icon">&#xe615;</i>查询</p>
         <div class="layui-form">
@@ -116,8 +116,7 @@
     </div>
 </div>
 <div class="content">
-    <table class="layui-table" lay-data="{height:500, url:'#', page:true, id:'test',limit:5}"
-           lay-filter="test" >
+    <table class="layui-table"  >
         <thead style="background:#F2F6FC">
         <tr style="background-color:#F2F6FC">
             <th lay-data="{field:'id', width:100, sort: true}" style="background-color:#F2F6FC">编号</th>
@@ -131,6 +130,7 @@
             <th lay-data="{field:'wealth'}">操作</th>
         </tr>
         </thead>
+    
     </table>
 </div>
 </body>
