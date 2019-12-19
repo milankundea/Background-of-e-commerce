@@ -1,5 +1,7 @@
-body {
-  background: #b3d4fc;
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 .head {
   text-align: center;
@@ -16,72 +18,81 @@ body {
   margin-top: 20px;
 }
 img {
-  height: 60px;
   width: 60px;
-  border-radius: 50%;
+  height: 60px;
+  border-radius: 50px ;
+  margin: 0 5px;
 }
 .left {
-  background: #f8f8f8;
-  height: 680px;
+  padding: 20px 0 0 20px;
+  border: 1px silver solid;
+  border-bottom: none ;
   overflow: auto;
-  overflow-x: hidden;
-  border-left: 1px solid #babbbb;
-  border-top: 1px solid #babbbb;
+  height: 550px;
 }
-.me {
-  padding-bottom: 10px;
+.left > div {
   text-align: center;
-  border-bottom: 1px solid #babbbb;
 }
-.me > img {
-  padding-top: 5px;
-  padding-bottom: 10px;
+.left > div > img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50px ;
 }
-.left > ul > li {
-  padding: 10px 0;
-  width: 137px;
-  height: 80px;
+ul > li {
   overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 10px 10px 10px 0;
 }
-.left > ul > li > img {
-  margin-left: 15px ;
-}
-.left > ul > li > span {
-  font-size: 20px;
-}
-.chat > div > img {
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-}
-.chathead {
-  padding: 45px 40px 23px 40px ;
-  border: 1px solid #babbbb;
-  border-left: none;
-  background: white;
+.right-head {
+  margin-top: 30px;
 }
 .chat {
-  background: #F2F6FC;
-  height: 485px;
+  height: 310px;
+  border: 1px silver solid;
+  border-left: none ;
+  border-right: none ;
 }
 .chat > div {
-  padding: 10px;
+  margin: 5px 0;
 }
-.chat > div > span {
-  font-size: 20px;
+.chat > div > div > img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.me {
+  text-align: right;
+}
+.right {
+  padding-top: 20px;
+  height: 100%;
+  border: 1px silver solid;
+  border-left: none ;
+  border-bottom: none ;
+}
+.text {
+  margin-bottom: 1px;
+}
+.text > div > button {
+  float: right;
+  width: 100px;
+}
+.Righthead {
+  text-align: center;
+  line-height: 68px;
+  font-size: 30px;
+  background: #F2F2F2;
+  font-weight: 700;
+}
+.iptbtn > input {
+  width: 300px;
+  display: inline-block;
+  margin-top: 5px;
+}
+.iptbtn {
+  text-align: center;
   padding: 5px;
-  border: 1px solid #b3d4fc;
-}
-.chatting {
-  padding: 10px;
-}
-.news {
-  float: left;
-  width: calc(50% - 5px);
-  height: 250px;
-  margin-top: 10px;
-  background: white;
-  box-shadow: 0 1px 1px #000;
 }
 .news > p {
   font-size: 20px;
@@ -92,43 +103,5 @@ img {
   padding-left: 10px;
   font-weight: 400;
   font-size: 20px;
-}
-.history {
-  float: left;
-  width: calc(50% - 5px);
-  height: 250px;
-  overflow: hidden;
-  margin-top: 10px;
-  margin-left: 10px;
-  box-shadow: 0 1px 1px #000;
-  background: white;
-}
-.righthead {
-  text-align: center;
-  line-height: 68px;
-  font-size: 30px;
-  background: #F2F2F2;
-  font-weight: 700;
-}
-.order {
-  margin-top: 5px;
-  box-shadow: 0 1px 1px #000;
-  height: 400px;
-  background: white;
-}
-.order > div > input {
-  margin: 5px 0 0 5px;
-  height: 38px;
-  width: 300px;
-}
-.kf > span {
-  background: #3ebe7a;
-}
-.kh > span {
-  background: white;
-}
-.text > input {
-  width: 600px;
-  height: 80px;
 }
 /*# sourceMappingURL=kf.css.map */
