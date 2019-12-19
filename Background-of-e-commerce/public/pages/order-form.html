@@ -165,7 +165,7 @@
         </tr>
         </thead>
         <tbody>
-            <tr>
+            <tr id='1'>
                 <td> <input type="checkbox" name="" title="" lay-skin="primary"></td>
                 <td>1</td>
                 <td>201809150101000001</td>
@@ -177,7 +177,7 @@
                 <td>APP订单</td>
                 <td>待支付</td>
                 <td>
-                    <button type="reset" class="layui-btn layui-btn-primary">查看订单</button>
+                    <button class="layui-btn btn-check layui-btn-primary" data-method="offset" data-type="auto" class="layui-btn layui-btn-normal">查看订单</button>
                     <button type="submit" class="layui-btn" lay-submit="" lay-filter="demo1">删除订单</button>
                 </td>     
             </tr>
@@ -250,6 +250,27 @@
     </table>
 </div>
 </body>
+<div id="motaikunag" style="display: none;">
+    <div class="layui-row">
+        <div class="layui-col-md9">
+            你的内容 9/12
+        </div>
+        <div class="layui-col-md3">
+            你的内容 3/12
+        </div>
+    </div>
+    <div class="layui-row">
+        <div class="layui-col-md3">
+            名字
+        </div>
+        <div class="layui-col-md9">
+            <input type="text" name="testname" value="">
+        </div>
+    </div>
+
+    <br/>
+    <input type="button" onclick="javascript:alert('点击按钮')" title="点我" value="点我">
+</div>
 <script src="../util/jquery-3.4.1.js"></script>
 <script src="../util/layui/layui.all.js"></script>
 <script>
@@ -277,4 +298,33 @@
     //
     // });
 </script>
+<!-- 弹出框 -->
+<script>
+    layui.use('layer', function(){ //独立版的layer无需执行这一句
+      var $ = layui.jquery, layer = layui.layer; //独立版的layer无需执行这一句
+      //触发事件
+      var active = {
+        offset: function(othis){
+          var type = othis.data('type')
+          ,text = $('#1');
+          layer.open({
+            type: 1
+            ,offset: type //具体配置参考：http://www.layui.com/doc/modules/layer.html#offset
+            ,id: 'layerDemo'+type //防止重复弹出
+            ,content: text
+            ,btn: '关闭全部'
+            ,btnAlign: 'c' //按钮居中
+            ,shade: 0.3 //不显示遮罩
+            ,yes: function(){
+              layer.closeAll();
+            }
+          });
+        }
+      };
+      $('.btn-check').on('click', function(){
+        var othis = $(this), method = othis.data('method');
+        active[method] ? active[method].call(this, othis) : '';
+      });
+    });
+    </script>
 </html>
